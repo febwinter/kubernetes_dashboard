@@ -9,3 +9,9 @@ app.get('/', (req,res,next) => {
 app.listen(port,() => {
     console.log(`Server is running at ${port}`);
 })
+
+//kubernetes API setting
+
+const kube = require('@kubernetes/client-node');
+const kc = new kube.KubeConfig();
+kc.loadFromDefault();
