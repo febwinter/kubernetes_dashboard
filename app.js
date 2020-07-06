@@ -3,6 +3,10 @@ const app = express();
 const port = 3000; // port setting
 
 //ejs setting
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
