@@ -3,8 +3,9 @@ const app = express();
 const port = 3000; // port setting
 
 //ejs setting
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.set('views','views');
+app.engine('html', require('ejs').renderFile);
 
 //rendering setting
 app.get('/', (req,res) => {
